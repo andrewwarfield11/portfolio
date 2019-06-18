@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags, both charset and viewport -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS, comes from the Bootstrap starter tempalte -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- JQuery first, then Popper.js, then Bootstrap JS, comes from the Bootstrap starter template -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS comes last, should only be single entry point -->
+    <script src="app.js"></script>
+    <!-- Title of the project -->
+    <title>Andrew Warfield</title>
+    <!-- add a navbar -->
+    <style>
+
+    .portfolio {
+        background: #fff;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    h1.portfolio {
+        font-weight: bold;
+    }
+
+    .header {
+        background-color: #333;
+        color: hotpink;
+    }
+
+    .info {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .top-buffer {
+        margin-top: 25px;
+    }
+
+    .bottom-buffer {
+        margin-bottom: 25px;
+    }
+
+    p {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="heading-wrapper">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="right-area">
+                            <h5 class="text-white">Location:</h5>
+                            <h5 class="text-white">St. Louis, MO</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="right-area">
+                            <h5 class="text-white">Phone:</h5>
+                            <h5 class="text-white">314-614-2786</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <i class="icon ion-ios-location-outline"></i>
+                        <div class="right-area">
+                            <h5 class="text-white">Email:</h5>
+                            <h5 class="text-white">adwarfield11@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <!-- add a container -->
+    <div class="container">
+
+        <!--use ul/li-->
+        <!--use cards maybe?-->
+        <!--use navbar to choose between items?-->
+        <div class="info">
+            <div class="row">
+                <div class="col-sm-4">
+                    <ul class="list-group">
+                        <li class="list-group item">
+                            <h6>Born on February 15, 1997</h6>
+                        </li>
+                        <li class="list-group item">
+                            <h6>BS in Computer Science from the University of Tulsa</h6>
+                        </li>
+                        <li class="list-group item">
+                            <h6>Graduated in May 2019</h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <h2>Andrew Warfield</h2>
+                    <img src="screenshots/face.png">
+                </div>
+                <div class="col-sm-4 text-right">
+                    <a href="#">Download Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio">
+            <nav class="nav">
+                <div class="col-sm-4">
+                    <h1>Projects</h1>
+                </div>
+                <div class="col-sm-8">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:darkblue" id="game">Defend the Tower</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:darkblue" id="ia">Interactive Algorithms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:darkblue" id="cart">Shopping Cart</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:darkblue" id="aes">AES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:darkblue" id="dh">Diffie Hellman</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="game">
+            <!--Include overview on top left and download/link on top right?-->
+            <!--Then have a code snippet section-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Overview</h2>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="#">Download jar</a>
+                </div>
+            </div>
+            <div class="row">
+                <p>This is a game that I made in java. The player controls the cannon on top of the tower and is try to defend against the
+                invaders. Click on the screen and the cannon will shoot in that direction. The helicopters will constantly shoot at the
+                tower, damaging it, and the enemies on the ground will walk towards the tower and attack it when they reach it.</p>
+            </div>
+            <div class="row">
+                <img src="screenshots/ingamelvl1.png">
+            </div>
+            <div class="row">
+                <p>There are ten levels total and in between each level the player can buy upgrades in a shop. Press on the name of an 
+                    item to buy it.</p>
+            </div>
+            <div class="row">
+                <img src="screenshots/gameshop.png">
+            </div>
+        </div>
+
+        <div class="ia">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Overview</h2>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="https://hidden-reaches-58019.herokuapp.com/">Link</a>
+                </div>
+            </div>
+            <div class="row">
+                <p>This is a group project I worked on with four other people to develop an app for the Microsoft Hololens to teach basic
+                    Computer Science concepts, such as simple algorithms and data structures, to new Computer Science students. Since I have
+                    graduated and no long have access to the Hololens we worked with, I unfortunately have a limited number of screenshots I
+                    can use from the Hololens itself, but below are the screenshots from the AVL tree and binary search tutorials as someone
+                    using the app would see them.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="screenshots/avltree.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="screenshots/binarysearch.png">
+                </div>
+            </div>
+            <div class="row">
+                <p>The application was developed using Unity, a popular game development engine. Below are screenshots from Unity of the 
+                     app's main menu, which shows all of the tutorials we actually made, as well as screenshots from the stack and bubble 
+                    sort tutorials. These are the tutorials that I worked on the most personally. The application does not look quite as
+                    good in Unity as it does on the Hololens itself, but it is still perfectly functional.
+                </p>
+            </div>
+            <!--One row for main menu, then two for tutorials-->
+            <div class="row bottom-buffer">
+                <img src="screenshots/mainmenuia.png">
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="screenshots/stacks.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="screenshots/bubblesort.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="cart">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Overview</h2>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="https://hidden-reaches-58019.herokuapp.com/">Link</a>
+                </div>
+            </div>
+            <div class="row">
+                <p>This project is a simple shopping cart web application built using bootstrap and jQuery. It displays a list
+                    of randomly generated book titles, each of which has an associated genre, price, rating, and stock. Using the
+                    sidebar,
+                    you can filter the list by availability, price, and rating The departments, searchbar, localization, and
+                    account are currently nonfunctional.
+                </p>
+            </div>
+            <div class="row">
+                <img src="screenshots/cartmainpage.png">
+            </div>
+            <div class="row">
+                <p>You can add products to the cart by checking the Add to Cart button. Once you have done this, you can go press
+                    the cart
+                    button to go to your cart, where there will be a purchase button. Since I'm not actually selling these products,
+                    the
+                    purchase button just redirects to the main page.
+                </p>
+            </div>
+            <div class="row">
+                <img src="screenshots/cartpurchasepage.png">
+            </div>
+        </div>
+
+        <div class="aes">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Overview</h2>
+                </div>
+            </div>
+            <div class="row">
+                <p>This project is an implementation of AES in C. It was originally designed to work with Travis CI as an autograder, but 
+                    the following is the output of a test file using 00112233445566778899aabbccddeeff as the message and 
+                    000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f as the key. This implementation will however work with 
+                    any size message for 128, 192, or 256 bit AES encryption.
+                </p>
+            </div>
+            <div class="row">
+                <img src="screenshots/testaesoutput.png">
+            </div>
+        </div>
+
+        <div class="dh">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Overview</h2>
+                </div>
+            </div>
+            <div class="row">
+                <p>This is an encrypted chat application made in java using AES encryption and a custom security provider. It uses Diffie
+                Hellman Key Exchange to safely generate and exchange the keys. The first screenshot shows the server side of the chat and the 
+            second shows the client side.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="screenshots/dhserver.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="screenshots/dhclient.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
