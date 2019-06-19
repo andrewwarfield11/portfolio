@@ -37,12 +37,12 @@
 
     .header {
         background-color: #333;
-        color: hotpink;
     }
 
     .info {
-        margin-top: 30px;
-        margin-bottom: 50px;
+        background-color: #eee;
+        width: 100%;
+        height: 100%;
     }
 
     .top-buffer {
@@ -56,6 +56,18 @@
     p {
         margin-top: 20px;
         margin-bottom: 5px;
+    }
+
+    .lborder {
+        border-left-style: groove;
+    }
+
+    .underlined {
+        border-bottom-style: outset;
+    }
+
+    .fullwidth {
+        width: 100%;
     }
 
 
@@ -99,7 +111,7 @@
         <!--use cards maybe?-->
         <!--use navbar to choose between items?-->
         <div class="info">
-            <div class="row">
+            <div class="row fullwidth">
                 <div class="col-sm-4">
                     <ul class="list-group">
                         <li class="list-group item">
@@ -115,50 +127,50 @@
                 </div>
                 <div class="col-sm-4 text-center">
                     <h2>Andrew Warfield</h2>
-                    <img src="screenshots/face.png">
+                    <img src="screenshots/me.jpg">
                 </div>
-                <div class="col-sm-4 text-right">
+                <div class="col-sm-4 text-center">
                     <a href="#">Download Resume</a>
                 </div>
             </div>
         </div>
 
         <div class="portfolio">
-            <nav class="nav">
-                <div class="col-sm-4">
-                    <h1>Projects</h1>
-                </div>
-                <div class="col-sm-8">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:darkblue" id="game">Defend the Tower</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:darkblue" id="ia">Interactive Algorithms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:darkblue" id="cart">Shopping Cart</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:darkblue" id="aes">AES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:darkblue" id="dh">Diffie Hellman</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                <nav class="nav">
+                    <div class="col-sm-4">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:darkblue" id="game">Defend the Tower</a>
+                            </li>
+                            <li class="nav-item lborder">
+                                <a class="nav-link" href="#" style="color:darkblue" id="ia">Interactive Algorithms</a>
+                            </li>
+                            <li class="nav-item lborder">
+                                <a class="nav-link" href="#" style="color:darkblue" id="cart">Shopping Cart</a>
+                            </li>
+                            <li class="nav-item lborder">
+                                <a class="nav-link" href="#" style="color:darkblue" id="aes">AES</a>
+                            </li>
+                            <li class="nav-item lborder">
+                                <a class="nav-link" href="#" style="color:darkblue" id="dh">Diffie Hellman</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
         </div>
 
         <div class="game">
             <!--Include overview on top left and download/link on top right?-->
             <!--Then have a code snippet section-->
-            <div class="row">
+            <div class="row underlined">
                 <div class="col-sm-6">
                     <h2>Overview</h2>
                 </div>
                 <div class="col-sm-6 text-right">
-                    <a href="#">Download jar</a>
+                    <a href="downloads/defendthetower.zip" download>Download Game</a>
                 </div>
             </div>
             <div class="row">
@@ -176,21 +188,25 @@
             <div class="row">
                 <img src="screenshots/gameshop.png">
             </div>
-            <div class="row top-buffer">
+            <div class="row top-buffer underlined">
                 <h2>Code Snippets</h2>
             </div>
             <div class="row">
-
+                <p>This is a snippet of the mouseLeftPress method, which is run everytime the player left clicks. It checks for the 
+                    current state of the menu, between in game, the generic main menu, the shop in between levels, and the end game screen.
+                    If it is in game, the cannon will shoot a bullet, and if it's in the main menu, shop, or end screen state, it will test 
+                    if the click was located inside one of the buttons on that particular state of the menu.
+                </p>
+            </div>
+            <div class="row">
+                <img src="snippets/gamesnippet.jpg">
             </div>
         </div>
 
         <div class="ia">
-            <div class="row">
-                <div class="col-sm-6">
+            <div class="row underlined">
+                <div class="col">
                     <h2>Overview</h2>
-                </div>
-                <div class="col-sm-6 text-right">
-                    <a href="https://hidden-reaches-58019.herokuapp.com/">Link</a>
                 </div>
             </div>
             <div class="row">
@@ -201,7 +217,7 @@
                     using the app would see them.
                 </p>
             </div>
-            <div class="row">
+            <div class="row bottom-buffer">
                 <div class="col-sm-6">
                     <img src="screenshots/avltree.png">
                 </div>
@@ -228,13 +244,34 @@
                     <img src="screenshots/bubblesort.png">
                 </div>
             </div>
-            <div class="row top-buffer">
+            <div class="row top-buffer underlined">
                 <h2>Code Snippets</h2>
+            </div>
+            <div class="row">
+                <p>This is a screenshot from the bubble sort implementation. The tutorial would highlight two consecutive values in 
+                    the list, with the variable tracker keeping track of the current position in the list of. If the user presses the 
+                    swap button, swap will be called, swapping the two values highlighted and updating the tracker. If the user presses 
+                    the pass button, it will just update the tracker. Every frame, there is a check to determine of the tracker is 
+                    a different value than the first value highlighted, and if so the values highlighted will also be updated.
+                </p>
+            </div>
+            <div class="row">
+                <img src="snippets/bubblesort.png">
+            </div>
+            <div class="row">
+                <p>This is a screenshot showing the core of the stack implementation: pushing, popping, and peeking. Pushing will make 
+                    sure that the top value is not being peeked at, get rid of any error messages that may have been created from trying 
+                    pop or peek from an empty stack, then actually push the new node to the stack. Pop will show an error if the stack is 
+                    empty, otherwise destroy the head value. Peek will also show an error if the stack is empty, and otherwise it will 
+                    show the value of the head, or stop showing the value if peek had already been pressed.</p>
+            </div>
+            <div class="row">
+                <img src="snippets/stacksnippet.png">
             </div>
         </div>
 
         <div class="cart">
-            <div class="row">
+            <div class="row underlined">
                 <div class="col-sm-6">
                     <h2>Overview</h2>
                 </div>
@@ -253,7 +290,7 @@
             <div class="row">
                 <img src="screenshots/cartmainpage.png">
             </div>
-            <div class="row">
+            <div class="row top-buffer">
                 <p>You can add products to the cart by checking the Add to Cart button. Once you have done this, you can go press
                     the cart
                     button to go to your cart, where there will be a purchase button. Since I'm not actually selling these products,
@@ -264,34 +301,73 @@
             <div class="row">
                 <img src="screenshots/cartpurchasepage.png">
             </div>
-            <div class="row top-buffer">
+            <div class="row top-buffer underlined">
                 <h2>Code Snippets</h2>
+            </div>
+            <div class="row">
+                <p>One of the most important parts of this project was ensuring that the filters for the products were working properly. 
+                    The code snippet below shows the logic I used to filter the products according to which options in the sidebar the 
+                    user had chosen. 
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="snippets/filters.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="snippets/checks.png">
+                </div>
+            </div>
+            <div class="row">
+                <p>In order to ensure that these tests worked properly, I created unit tests using mocha and chai, a popular unit 
+                    testing library for javascript. All of the tests would be far too long to fit here, but the snippet below shows 
+                    how the unit tests were set up.
+                </p>
+            </div>
+            <div class="row">
+                <img src="snippets/testsexample.png">
             </div>
         </div>
 
         <div class="aes">
-            <div class="row">
+            <div class="row underlined">
                 <div class="col-sm-6">
                     <h2>Overview</h2>
                 </div>
             </div>
             <div class="row">
                 <p>This project is an implementation of AES in C. It was originally designed to work with Travis CI as an autograder, but 
-                    the following is the output of a test file using 00112233445566778899aabbccddeeff as the message and 
-                    000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f as the key. This implementation will however work with 
-                    any size message for 128, 192, or 256 bit AES encryption.
+                    the following is the output of a test file using simple, standard test parameters for the message and the key. This 
+                    implementation will however work with any size message for 128, 192, or 256 bit AES encryption.
                 </p>
             </div>
             <div class="row">
                 <img src="screenshots/testaesoutput.png">
             </div>
-            <div class="row top-buffer">
+            <div class="row top-buffer underlined">
                 <h2>Code Snippets</h2>
+            </div>
+            <div class="row">
+                <p>This snippet shows what happens at the beginning of this implementation of aes. The init function will len, which 
+                    is the size of the key, to set the key length and number of rounds. Len is measured in bytes, so if it is 16 that 
+                    means you are using 128 bit encryption, which means there will be 10 rounds. If len is 24, you are using 192 bit 
+                    encryption and need 12 rounds. If len 32, you are using 256 bit encryption and need 14 rounds. The key length in this 
+                    implementation is measured in units of 32 bit words, or 4 byte words. This means that the value used will always be len/4.
+                    Key expansion will then be called, which will then expand the key so that you have one 32 bit word for each of the rounds.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="snippets/aesinit.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="snippets/keyexpansion.png">
+                </div>
             </div>
         </div>
 
         <div class="dh">
-            <div class="row">
+            <div class="row underlined">
                 <div class="col-sm-6">
                     <h2>Overview</h2>
                 </div>
@@ -299,7 +375,7 @@
             <div class="row">
                 <p>This is an encrypted chat application made in java using AES encryption and a custom security provider. It uses Diffie
                 Hellman Key Exchange to safely generate and exchange the keys. The first screenshot shows the server side of the chat and the 
-            second shows the client side.</p>
+                second shows the client side.</p>
             </div>
             <div class="row">
                 <div class="col-sm-6">
@@ -309,8 +385,23 @@
                     <img src="screenshots/dhclient.png">
                 </div>
             </div>
-            <div class="row top-buffer">
+            <div class="row top-buffer underlined">
                 <h2>Code Snippets</h2>
+            </div>
+            <div class="row">
+                <p>The most important part of this chat application was the key exchange itself. The snippets below contrast the slightly 
+                    different steps that the server and client take in order to perform the key exchange. I decided to have the server 
+                    generate both the parameters for the key exchange and the IV (the initialization vector for the cipher block chain), 
+                    and the client receive both of them.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="snippets/dhserver.png">
+                </div>
+                <div class="col-sm-6">
+                    <img src="snippets/dhclient.png">
+                </div>
             </div>
         </div>
     </div>

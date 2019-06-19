@@ -17,8 +17,9 @@ $(function () {
 
     $("#game").click(function(event) {
         console.log(event);
+        var curr = ".game";
         if(mode != GAME) {
-            hideCurrProj();
+            hideCurrProj(curr);
             mode = GAME;
             $(".game").show();
         }
@@ -56,7 +57,7 @@ $(function () {
         }
     })
 
-    function hideCurrProj() {
+    function hideCurrProj(c) {
         if(mode == GAME) {
             $(".game").hide();
         }
@@ -77,43 +78,4 @@ $(function () {
         }
     }
 
-    function clearProject() {
-        $(".project").empty();
-    }
-
-    function buildGame() {
-        // first row: description of game
-        var rows = $('<div class="row"><p>This is a game that I made in java. The player controls the cannon on top of the tower\
-         and is try to defend against theinvaders. Click on the screen and the cannon will shoot in that direction.\
-          The helicopters will constantly shoot at thetower, damaging it, and the enemies on the ground will walk towards\
-           the tower and attack it when they reach it.</p></div>');
-
-        // second row: in game screenshot from level 1
-        rows.append($('<div class="row"><img src="screenshots/ingamelvl1.png"></div>'));
-
-        // third row: description of shop
-        rows.append($('<div class="row"><p> There are ten levels total and in between each level the player can buy upgrades in\
-         a shop. Press on the name of an item to buy it.</p></div>'));
-
-        // fourth row: screenshot of shop
-        rows.append($('<div class="row"><img src="screenshots/gameshop.png" ></div ></div >'));
-
-         $(".project").append(rows);
-    }
-
-    function buildInteractiveAlgorithms() {
-
-    }
-
-    function buildCart() {
-
-    }
-
-    function buildAES() {
-
-    }
-
-    function buildDH() {
-
-    }
 });
